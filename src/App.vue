@@ -1,7 +1,7 @@
 <template>
   <header>please watch over my pet goose while it sleeps, thank u &lt;3</header>
   <main>
-    <span>goose</span>
+    <img :src="watchDuration.seconds % 2 === 0 ? '/jose.png' : '/jose2.png'" width="256" />
     <p v-if="watchDuration.seconds > 0">
       you have watched over {{ gooseName }} for
       <span id="time">{{
@@ -48,7 +48,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
+  gap: 0;
 }
 
 span#time {
