@@ -2,13 +2,20 @@
   <header>please watch over my pet goose while it sleeps, thank u &lt;3</header>
   <main>
     <img :src="watchDuration.seconds % 2 === 0 ? '/jose.png' : '/jose2.png'" width="256" />
-    <p v-if="watchDuration.seconds > 0">
-      you have watched over {{ gooseName }} for
-      <span id="time">{{
-        watchDuration.normalize().toHuman({ listStyle: "short", showZeros: false })
-      }}</span>
+    <template v-if="watchDuration.seconds > 0">
+      <p>
+        <span>you have watched over {{ gooseName }} for:</span>
+        <br />
+        <span id="time">{{
+          watchDuration.normalize().toHuman({ listStyle: "short", showZeros: false })
+        }}</span>
+      </p>
+    </template>
+    <p v-else>
+      <span>you have watched over {{ gooseName }} for:</span>
+      <br />
+      <span id="time">0 seconds</span>
     </p>
-    <p v-else>you have watched over {{ gooseName }} for <span id="time">0 seconds</span></p>
   </main>
 </template>
 
