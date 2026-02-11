@@ -66,7 +66,7 @@ function rank(): WatchRank|undefined {
   if (totalWatchTimeSeconds >= 300)  return { text: 'jose protector!!! :3',  rankClass: 'rank-protector' }
   if (totalWatchTimeSeconds >= 180)  return { text: 'jose bestie!! :3',      rankClass: 'rank-bestie' }
   if (totalWatchTimeSeconds >= 90)   return { text: 'jose friend! :3',       rankClass: 'rank-friend' }
-  if (totalWatchTimeSeconds >= 60)   return { text: 'jose super-fan :3',    rankClass: 'rank-superfan' }
+  if (totalWatchTimeSeconds >= 60)   return { text: 'jose super-fan :3',     rankClass: 'rank-superfan' }
   if (totalWatchTimeSeconds >= 45)   return { text: 'jose fan :3',           rankClass: 'rank-fan' }
   if (totalWatchTimeSeconds >= 30)   return { text: 'jose admirer :3',       rankClass: 'rank-admirer' }
   if (totalWatchTimeSeconds >= 15)   return { text: 'jose enthusiast :3',    rankClass: 'rank-enthusiast' }
