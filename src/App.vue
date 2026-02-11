@@ -1,7 +1,12 @@
 <template>
   <header>please watch over my pet goose while it sleeps, thank u &lt;3</header>
   <main>
-    <img :src="watchDuration.seconds % 2 === 0 ? '/jose.png' : '/jose2.png'" width="256" />
+    <img
+      id="goose"
+      :src="watchDuration.seconds % 2 === 0 ? '/jose.png' : '/jose2.png'"
+      width="256"
+      alt="Jose the Goose sleeping"
+    />
     <template v-if="watchDuration.seconds > 0">
       <p>
         <span>you have watched over {{ gooseName }} for:</span>
@@ -17,6 +22,11 @@
       <span id="time">0 seconds</span>
     </p>
   </main>
+  <footer>
+    <a href="https://eepyberry.me">
+      <img id="eepyberry" src="/eepyberry.png" alt="EepyBerry logo in pixel art" />
+    </a>
+  </footer>
 </template>
 
 <script setup lang="ts">
@@ -41,7 +51,8 @@ function tick() {
 </script>
 
 <style lang="css">
-header {
+header,
+footer {
   padding: 1rem;
   text-align: center;
 }
@@ -56,6 +67,23 @@ main {
   align-items: center;
   justify-content: center;
   gap: 0;
+}
+footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+img#goose {
+  width: clamp(8rem, 50%, 16rem);
+}
+img#eepyberry {
+  width: 4rem;
+}
+img#eepyberry:hover {
+  transform: scale(1.05);
+}
+img#eepyberry:active {
+  transform: scale(0.95);
 }
 
 span#time {
