@@ -7,14 +7,19 @@
   --goose-background: #0a090c;
   --goose-text: #fff;
   --goose-highlight: #2ac49d;
+  --rank-observer: #a0a0a0;
   --rank-enthusiast: #ff6600;
   --rank-admirer: #ff9939;
   --rank-fan: #ffca39;
   --rank-superfan: #93ff18;
-  --rank-friend: #00c3ff;
+  --rank-vipfan: #18ffba;
+  --rank-friend: #34aeff;
+  --rank-greatfriend: #9578ff;
   --rank-bestie: #c300ff;
-  --rank-protector: linear-gradient(in hsl to right, #8f66ff, #ff85f5 , #ff0062, #ad66ff, #ff85f5);
+  --rank-sidekick: linear-gradient(in hsl to right, #ffffff, #ffb4f9, #9c78ff, #ffb4f9, #ffffff);
+  --rank-protector: linear-gradient(in hsl to right, #ff85f5, #ff0062, #8153ff, #ff85f5, #ff0062);
   --rank-guardian: linear-gradient(in hsl to right, #8f66ff, #39b0ff , #33ff33, #ff0062, #8f66ff, #39b0ff);
+  --rank-herald: linear-gradient(in hsl to right, #ffffff, #ff7300, #ffffff, #ff7300, #ffffff);
 }
 
 *,
