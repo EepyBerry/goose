@@ -2,23 +2,23 @@
   <header>please watch over my pet goose while it sleeps, thank u &lt;3</header>
   <main>
     <!-- the goose :3 -->
-    <img
-      id="goose"
-      :src="watchDuration.seconds % 2 === 0 ? '/jose.png' : '/jose2.png'"
-      width="256"
-      alt="Jose the Goose sleeping"
-    />
+    <button id="pet-button" type="button" @click="petGoose()">
+      <img
+        id="goose"
+        :src="watchDuration.seconds % 2 === 0 ? '/jose.png' : '/jose2.png'"
+        width="256"
+        alt="Jose the Goose sleeping"
+      />
+    </button>
 
     <!-- watch time tracker -->
-    <template v-if="watchDuration.seconds > 0">
-      <p>
-        <span>you have watched over {{ gooseName }} for:</span>
-        <br />
-        <span id="time">{{
-          watchDuration.normalize().toHuman({ listStyle: "short", showZeros: false })
-        }}</span>
-      </p>
-    </template>
+    <p v-if="watchDuration.seconds > 0">
+      <span>you have watched over {{ gooseName }} for:</span>
+      <br />
+      <span id="time">{{
+        watchDuration.normalize().toHuman({ listStyle: "short", showZeros: false })
+      }}</span>
+    </p>
     <p v-else>
       <span>you have watched over {{ gooseName }} for:</span>
       <br />
@@ -44,6 +44,16 @@
 <script setup lang="ts">
 import { Duration } from "luxon";
 import { onMounted, ref, type Ref } from "vue";
+import { Howl } from "howler";
+import gooseSfx1 from "@/assets/sounds/goose1.ogg";
+import gooseSfx2 from "@/assets/sounds/goose2.ogg";
+import gooseSfx3 from "@/assets/sounds/goose3.ogg";
+
+const gooseAudio = [
+  new Howl({ src: gooseSfx1 }),
+  new Howl({ src: gooseSfx2 }),
+  new Howl({ src: gooseSfx3 }),
+];
 
 const gooseName = ref("Jose the Goose");
 const watchDuration: Ref<Duration> = ref(Duration.fromObject({ seconds: 0 }).normalize());
@@ -59,6 +69,14 @@ function tick() {
     minutes: 0,
     seconds: watchDuration.value.seconds + 1,
   });
+}
+
+function petGoose() {
+  // get random number from 1 to 4
+  const minCeiled = Math.ceil(0);
+  const maxFloored = Math.floor(3);
+  const trackId = Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+  gooseAudio[trackId]!.play();
 }
 
 type WatchRank = { text: string; rankClass: string };
@@ -82,7 +100,7 @@ function rank(debugSeconds?: number): WatchRank|undefined {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
 /*-------------------------------------------*/
 /*               PAGE LAYOUT                 */
 /*-------------------------------------------*/
@@ -108,18 +126,41 @@ footer {
   justify-content: flex-end;
 }
 
-img#goose {
+button#pet-button {
+  background: none;
+  color: transparent;
+  border: none;
+  padding: 0;
   margin-top: 3rem;
-  width: clamp(8rem, 60%, 16rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 50ms ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.975);
+  }
+}
+
+img#goose {
+  flex: 1;
+  pointer-events: none;
+  width: clamp(8rem, 25vw, 16rem);
 }
 img#eepyberry {
   width: 4rem;
-}
-img#eepyberry:hover {
-  transform: scale(1.05);
-}
-img#eepyberry:active {
-  transform: scale(0.95);
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 p#rank {
