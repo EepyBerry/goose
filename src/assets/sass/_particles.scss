@@ -1,0 +1,11 @@
+// https://codepen.io/Mamboleoo/pen/JjdXPgR
+particle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  background-image: url('/heart.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
