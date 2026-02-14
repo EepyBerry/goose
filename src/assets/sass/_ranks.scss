@@ -1,0 +1,216 @@
+/*-------------------------------------------*/
+/*               WATCH RANKS                 */
+/*-------------------------------------------*/
+.rank-observer {
+  color: var(--rank-observer);
+  font-weight: 300;
+}
+.rank-enthusiast {
+  color: var(--rank-enthusiast);
+  font-weight: 300;
+}
+.rank-admirer {
+  color: var(--rank-admirer);
+  font-weight: 450;
+}
+.rank-fan {
+  color: var(--rank-fan);
+  font-weight: 500;
+  text-shadow: 0 0 2px var(--rank-fan);
+}
+.rank-superfan {
+  color: var(--rank-superfan);
+  font-weight: 500;
+  text-shadow: 0 0 4px var(--rank-superfan);
+}
+.rank-vipfan {
+  color: var(--rank-vipfan);
+  font-weight: 600;
+  text-shadow: 0 0 6px var(--rank-vipfan);
+}
+.rank-friend {
+  color: var(--rank-friend);
+  font-weight: 700;
+  animation: rank-blinkglow 4s linear infinite forwards;
+}
+.rank-greatfriend {
+  color: var(--rank-greatfriend);
+  font-weight: 600;
+  text-shadow: 0 0 2px var(--rank-greatfriend);
+  animation: rank-blinkglow 3s linear infinite forwards;
+}
+.rank-bestie {
+  color: var(--rank-bestie);
+  font-weight: 700;
+  text-shadow: 0 0 6px var(--rank-bestie);
+  animation: rank-blinkglow 2s linear infinite forwards;
+}
+
+.rank-sidekick::before {
+  z-index: -1;
+  content: "jose sidekick!! :3";
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  text-shadow: 0 0 2px #fff8;
+}
+.rank-sidekick {
+  position: relative;
+
+  background: var(--rank-sidekick);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 500% 100%;
+
+  color: transparent;
+  font-weight: 800;
+  animation: rank-gradientloop 2s linear infinite forwards;
+}
+
+.rank-protector::before {
+  z-index: -1;
+  content: "jose protector!!! :3";
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  text-shadow: 0 0 2px #fff8;
+}
+.rank-protector {
+  position: relative;
+
+  background: var(--rank-protector);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 400% 100%;
+
+  color: transparent;
+  font-weight: 800;
+  animation: rank-gradientloop 1.5s linear infinite forwards;
+}
+
+.rank-guardian::before {
+  z-index: -1;
+  content: "jose guardian!!!! :3";
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  text-shadow: 0 0 2px #fff8;
+}
+.rank-guardian {
+  position: relative;
+
+  background: var(--rank-guardian);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 450% 100%;
+
+  color: transparent;
+  font-weight: 900;
+  animation: rank-gradientloop 2s linear infinite forwards;
+}
+
+.rank-herald::before {
+  z-index: -1;
+  content: "jose herald!!!!! :3";
+  position: absolute;
+  inset: 0;
+  margin-left: 22px;
+  color: transparent;
+  text-shadow: 0 0 6px #ffdf2baa;
+  text-wrap: nowrap;
+}
+.rank-herald {
+  position: relative;
+
+  background: var(--rank-herald);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200% 100%;
+
+  color: transparent;
+  font-weight: 900;
+  animation: rank-gradientloop 1s linear infinite forwards;
+
+  display: flex;
+  align-items: center;
+
+  .noto--goose {
+    filter: drop-shadow(0 0 6px #ffdf2baa);
+  }
+}
+
+/*-------------------------------------------*/
+/*               PETTING RANKS               */
+/*-------------------------------------------*/
+
+.rank-smolpets {
+  color: var(--rank-smolpets);
+  font-weight: 300;
+}
+.rank-beginnerpets {
+  color: var(--rank-beginnerpets);
+  font-weight: 450;
+}
+.rank-regularpets {
+  color: var(--rank-regularpets);
+  font-weight: 600;
+  text-shadow: 0 0 2px var(--rank-regularpets);
+}
+.rank-dedicatedpets {
+  color: var(--rank-dedicatedpets);
+  font-weight: 600;
+  text-shadow: 0 0 2px var(--rank-dedicatedpets);
+  animation: rank-blinkglow 2s linear infinite forwards;
+}
+
+.rank-expertpets::before {
+  z-index: -1;
+  content: "expert!!!";
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  text-shadow: 0 0 2px #fff8;
+}
+.rank-expertpets {
+  position: relative;
+
+  background: var(--rank-expertpets);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 450% 100%;
+
+  color: transparent;
+  font-weight: 900;
+  animation: rank-gradientloop 2s linear infinite forwards;
+}
+
+
+.rank-prodigypets::before {
+  z-index: -1;
+  content: "prodigy!!!!!";
+  position: absolute;
+  inset: 0;
+  margin-left: 22px;
+  color: transparent;
+  text-shadow: 0 0 4px #fff8;
+  text-wrap: nowrap;
+}
+.rank-prodigypets {
+  position: relative;
+
+  background: var(--rank-prodigypets);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200% 100%;
+
+  color: transparent;
+  font-weight: 900;
+  animation: rank-gradientloop 1s linear infinite forwards;
+
+  display: flex;
+  align-items: center;
+
+  .noto--goose {
+    filter: drop-shadow(0 0 6px #fff8);
+  }
+}

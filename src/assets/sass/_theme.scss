@@ -1,0 +1,25 @@
+:root {
+  --goose-background: #0a090c;
+  --goose-text: #fff;
+  --goose-highlight: #2ac49d;
+  --rank-observer: #a0a0a0;
+  --rank-enthusiast: #ff6600;
+  --rank-admirer: #ff9939;
+  --rank-fan: #ffca39;
+  --rank-superfan: #93ff18;
+  --rank-vipfan: #18ffba;
+  --rank-friend: #34aeff;
+  --rank-greatfriend: #9578ff;
+  --rank-bestie: #c300ff;
+  --rank-sidekick: linear-gradient(in hsl to right, #ffffff, #ffb4f9, #9c78ff, #ffb4f9, #ffffff);
+  --rank-protector: linear-gradient(in hsl to right, #ff85f5, #ff0062, #8153ff, #ff85f5, #ff0062);
+  --rank-guardian: linear-gradient(in hsl to right, #8f66ff, #39b0ff , #33ff33, #ff0062, #8f66ff, #39b0ff);
+  --rank-herald: linear-gradient(in hsl to right, #ffffff, #ff7300, #ffffff, #ff7300, #ffffff);
+
+  --rank-smolpets: var(--rank-observer);
+  --rank-beginnerpets: #ff82d5;
+  --rank-regularpets: #ff4b9f;
+  --rank-dedicatedpets: #ff0077;
+  --rank-expertpets: linear-gradient(in hsl to right, #ff82d5, #ff0062, #a078ff, #ff82d5, #ff0062);
+  --rank-prodigypets: linear-gradient(in hsl to right, #ffffff, #ff7300, #ffffff, #ff7300, #ffffff);
+}
